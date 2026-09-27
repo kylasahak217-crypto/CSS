@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — CSS Department</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        .contact-info p { padding: 0.7rem 0; font-size: 1.05rem; }
+        .contact-info strong { color: var(--navy); }
+        form label { display: block; margin-top: 1rem; font-weight: 600; }
+        input, textarea {
+            width: 100%;
+            padding: 0.9rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        button[type="submit"] { margin-top: 1.2rem; width: 100%; border: none; cursor: pointer; font-size: 1rem; }
+        .hours-table { width: 100%; margin-top: 1rem; border-collapse: collapse; }
+        .hours-table td { padding: 0.7rem; border-bottom: 1px solid #eee; }
+        .hours-table td:first-child { font-weight: 600; color: var(--navy); width: 40%; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="School Logo" class="logo">
+    <div class="brand">
+        <h1>Manicahan National High School</h1>
+        <p>Computer Systems Servicing — CSS Department</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About CSS</a></li>
+    <li><a href="modules.html">Modules</a></li>   <!-- ✅ ADD THIS LINE -->
+    <li><a href="faculty.html">Faculty & Staff</a></li>
+    <li><a href="programs.html" class="active">Programs</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    	</ul>
+</nav>
+
+<div class="container">
+    <h2 class="page-title">Contact Us</h2>
+
+    <div class="contact-grid">
+        <div class="card contact-info">
+            <h3 style="color: var(--navy); margin-bottom: 1.5rem;">📍 Get In Touch</h3>
+            <p><strong>Location:</strong> Manicahan National High School<br>Manicahan, 23 km East, Zamboanga City</p>
+            <p><strong>Office:</strong> CSS / Guidance Office — Admin Building</p>
+            <p><strong>Telephone:</strong> (062) XXX-XXXX</p>
+            <p><strong>Mobile:</strong> 09XX-XXX-XXXX</p>
+            <p><strong>Email:</strong> mnhs.css.deped@gmail.com</p>
+
+            <h3 style="color: var(--navy); margin: 2rem 0 1rem;">🕐 Office Hours</h3>
+            <table class="hours-table">
+                <tr><td>Monday – Friday</td><td>8:00 AM – 5:00 PM</td></tr>
+                <tr><td>Saturday</td><td>By Appointment</td></tr>
+                <tr><td>Sunday & Holidays</td><td>Closed</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3 style="color: var(--navy); margin-bottom: 1.5rem;">✉️ Send Us a Message</h3>
+            <form onsubmit="alert('✅ Message sent! We will get back to you soon.'); return false;">
+                <label>Your Full Name</label>
+                <input type="text" required placeholder="Enter your name">
+
+                <label>Your Role</label>
+                <select required style="width: 100%; padding: 0.9rem; margin-top: 0.5rem; border: 1px solid #ddd; border-radius: 8px;">
+                    <option value="">Select...</option>
+                    <option>Student</option>
+                    <option>Parent / Guardian</option>
+                    <option>Teacher / Staff</option>
+                    <option>Visitor / Other</option>
+                </select>
+
+                <label>Contact Number</label>
+                <input type="tel" required placeholder="e.g., 0912 345 6789">
+
+                <label>Message / Concern</label>
+                <textarea rows="5" placeholder="How can we help you?"></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Manicahan National High School — CSS Department</p>
+    <p style="margin-top: 0.5rem; opacity: 0.75;">Manicahan, Zamboanga City • DepEd Zamboanga City</p>
+</footer>
+
+</body>
+</html>

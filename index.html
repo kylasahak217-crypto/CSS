@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Department — Manicahan National High School</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin: 2rem 0 3rem;
+        }
+        .hero-banner {
+            background: linear-gradient(rgba(11, 44, 103, 0.75), rgba(37, 99, 235, 0.75)), url('teachers.jpg') center/cover no-repeat;
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            color: white;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .hero-banner h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .hero-banner p { font-size: 1.1rem; max-width: 500px; }
+        .hero-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .hero-card h3 { color: var(--navy); margin-bottom: 1rem; }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        .feat-box {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .feat-box:hover { transform: translateY(-5px); }
+        .feat-box h4 { color: var(--navy); margin: 1rem 0; }
+        .motto {
+            background: linear-gradient(135deg, var(--light), #fff);
+            border-left: 5px solid var(--gold);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <img src="logo.jpg" alt="School Logo" class="logo">
+    <div class="brand">
+        <h1>Manicahan National High School</h1>
+        <p>Computer Servicing System — CSS Department</p>
+    </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+    <ul>
+ <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About CSS</a></li>
+    <li><a href="modules.html">Modules</a></li>   <!-- ✅ ADD THIS LINE -->
+    <li><a href="faculty.html">Faculty & Staff</a></li>
+    <li><a href="programs.html" class="active">Programs</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="hero-banner">
+            <h2>Welcome to the <br>CSS Department</h2>
+            <p>Committed to nurturing every student — academic guidance, counseling, and support services for all learners of Manicahan National High School.</p>
+            <a href="about.html" class="btn" style="margin-top: 1.5rem;">Learn More About Us →</a>
+        </div>
+        <div class="hero-card">
+            <h3>📢 Announcement</h3>
+            <p style="color: #666; margin-bottom: 1rem;">Academic Year 2025–2026</p>
+            <p style="font-weight: 600; color: var(--navy);">Enrollment & Computer Services are now open!</p>
+            <p style="margin: 1rem 0; font-size: 0.95rem;">Visit us at the Admin Building<br>Mon–Fri: 8:00 AM – 5:00 PM</p>
+            <a href="contact.html" class="btn btn-gold">Get in Touch</a>
+        </div>
+    </div>
+
+    <!-- MOTTO -->
+    <div class="motto">
+        <h3 style="color: var(--navy); font-size: 1.4rem;">"Service with Heart and Dedication"</h3>
+        <p style="margin-top: 0.8rem; font-size: 1.05rem;">We believe that every student matters. Our team provides guidance, assistance, and care to help every learner succeed and grow.</p>
+    </div>
+
+    <!-- FEATURES -->
+    <h2 class="page-title">What We Do</h2>
+    <div class="features">
+        <div class="feat-box">
+            <h4>🎓 Academic Guidance</h4>
+            <p>Personalized advice to help you choose the right track and subjects</p>
+        </div>
+        <div class="feat-box">
+            <h4>🤝 Student Counseling</h4>
+            <p>Confidential support — personal, social, and emotional well-being</p>
+        </div>
+        <div class="feat-box">
+            <h4>📚 Scholarship Info</h4>
+            <p>Updates on financial aid and scholarship opportunities</p>
+        </div>
+        <div class="feat-box">
+            <h4>🏆 Student Development</h4>
+            <p>Leadership training, workshops, and career guidance</p>
+        </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="card" style="text-align: center; margin-top: 3rem;">
+        <h3 style="color: var(--navy); margin-bottom: 1rem;">Meet Our Team</h3>
+        <p style="margin-bottom: 1.5rem;">Get to know the teachers and staff behind the CSS Department</p>
+        <a href="faculty.html" class="btn">View Faculty & Staff →</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Manicahan National High School — CSS Department</p>
+    <p style="margin-top: 0.5rem; opacity: 0.75;">Manicahan, Zamboanga City • DepEd Zamboanga City</p>
+</footer>
+
+</body>
+</html>

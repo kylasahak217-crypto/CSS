@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs — CSS Department</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .program-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--sky);
+            transition: transform 0.3s;
+        }
+        .program-card:hover { transform: translateY(-5px); }
+        .program-card h3 { color: var(--navy); margin-bottom: 1rem; }
+        .program-card ul { list-style: none; margin-top: 1rem; }
+        .program-card li { padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+        .program-card li:last-child { border-bottom: none; }
+        .program-card li::before { content: "✓ "; color: var(--sky); font-weight: bold; margin-right: 6px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="School Logo" class="logo">
+    <div class="brand">
+        <h1>Manicahan National High School</h1>
+        <p>Computer Systems Servicing — CSS Department</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About CSS</a></li>
+    <li><a href="modules.html">Modules</a></li>   <!-- ✅ ADD THIS LINE -->
+    <li><a href="faculty.html">Faculty & Staff</a></li>
+    <li><a href="programs.html" class="active">Programs</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    	</ul>
+</nav>
+
+<div class="container">
+    <h2 class="page-title">Our Programs & Services</h2>
+
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.05rem;">
+        We offer a wide range of services designed to support every student from enrollment to graduation.
+    </p>
+
+    <div class="program-grid">
+        <div class="program-card">
+            <h3>🎓 Academic Guidance</h3>
+            <ul>
+                <li>Senior High School Track Selection</li>
+                <li>Subject Scheduling & Load Management</li>
+                <li>Academic Performance Monitoring</li>
+                <li>Remedial & Enhancement Programs</li>
+                <li>Graduation Requirements Check</li>
+            </ul>
+        </div>
+
+        <div class="program-card">
+            <h3>💬 Counseling Services</h3>
+            <ul>
+                <li>Individual Student Counseling</li>
+                <li>Peer & Group Mediation</li>
+                <li>Behavioral Guidance & Intervention</li>
+                <li>Stress & Emotional Support</li>
+                <li>Confidential & Safe Space</li>
+            </ul>
+        </div>
+
+        <div class="program-card">
+            <h3>🌟 Student Development</h3>
+            <ul>
+                <li>Leadership Training & Workshops</li>
+                <li>Career Guidance & Planning</li>
+                <li>Personality & Confidence Building</li>
+                <li>Student Organization Support</li>
+                <li>Values Formation Activities</li>
+            </ul>
+        </div>
+
+        <div class="program-card">
+            <h3>📋 Assistance & Info</h3>
+            <ul>
+                <li>Scholarship & Financial Aid Updates</li>
+                <li>Student Records & Clearance</li>
+                <li>Transfer & Enrollment Assistance</li>
+                <li>Parent-Teacher Coordination</li>
+                <li>Referral to Specialized Services</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" style="text-align: center; margin-top: 3rem;">
+        <h3 style="color: var(--navy); margin-bottom: 1rem;">Need Assistance?</h3>
+        <p style="margin-bottom: 1.5rem;">Drop by the CSS Office or send us a message — we're here to help!</p>
+        <a href="contact.html" class="btn">Get in Touch →</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Manicahan National High School — CSS Department</p>
+    <p style="margin-top: 0.5rem; opacity: 0.75;">Manicahan, Zamboanga City • DepEd Zamboanga City</p>
+</footer>
+
+</body>
+</html>

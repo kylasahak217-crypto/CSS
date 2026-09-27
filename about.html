@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CSS — Manicahan National High School</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section-block { margin-bottom: 2.5rem; }
+        .vision-mission {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .vm-card {
+            padding: 2rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .vision { background: linear-gradient(135deg, #EFF6FF, #FFFFFF); border-top: 4px solid var(--sky); }
+        .mission { background: linear-gradient(135deg, #FFFBEB, #FFFFFF); border-top: 4px solid var(--gold); }
+        .history { border-left: 4px solid var(--navy); padding-left: 1.5rem; }
+
+        /* New: Photo Gallery Section */
+        .photo-section { margin: 3rem 0; }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .photo-card {
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .photo-card:hover { transform: translateY(-5px); }
+        .photo-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .photo-text { padding: 1.5rem; }
+        .photo-text h4 { color: var(--navy); margin-bottom: 0.5rem; }
+        .photo-text p { color: #555; font-size: 0.95rem; }
+
+        .feature-photo {
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="School Logo" class="logo">
+    <div class="brand">
+        <h1>Manicahan National High School</h1>
+        <p>Computer Systems Servicing — CSS Department</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About CSS</a></li>
+    <li><a href="modules.html">Modules</a></li>   <!-- ✅ ADD THIS LINE -->
+    <li><a href="faculty.html">Faculty & Staff</a></li>
+    <li><a href="programs.html" class="active">Programs</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    	</ul>
+</nav>
+
+<div class="container">
+    <h2 class="page-title">About the CSS Department</h2>
+
+    <!-- FEATURE IMAGE: Whole Faculty -->
+    <img src="teachers.jpg" alt="CSS Faculty and Staff" class="feature-photo">
+
+    <div class="card section-block">
+        <h3 style="color: var(--navy); margin-bottom: 1rem;">Who We Are</h3>
+        <p style="font-size: 1.05rem;">The <strong>Computer Systems Servicing — CSS Department</strong> of Manicahan National High School is dedicated to providing holistic guidance and assistance to every learner. We ensure that students receive not just academic instruction, but also the care, counseling, and support needed to thrive in and outside the classroom.</p>
+    </div>
+
+    <div class="vision-mission">
+        <div class="vm-card vision">
+            <h3 style="color: var(--sky); margin-bottom: 1rem;">🎯 Our Vision</h3>
+            <p>To produce well-rounded, disciplined, and responsible individuals who contribute meaningfully to society — guided by values, excellence, and service.</p>
+        </div>
+        <div class="vm-card mission">
+            <h3 style="color: #B45309; margin-bottom: 1rem;">🚀 Our Mission</h3>
+            <p>To provide accessible, quality guidance and support services that empower students to realize their full potential — academically, socially, and personally.</p>
+        </div>
+    </div>
+
+    <!-- 📸 PHOTO GALLERY SECTION -->
+    <div class="photo-section">
+        <h2 class="page-title">Our Work in Action</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">Through guidance, hands-on learning, and technical training — we shape the future of every student.</p>
+
+        <div class="photo-grid">
+            <!-- Photo 1: Counseling & Assistance -->
+            <div class="photo-card">
+                <img src="css-counseling.jpg" alt="Student Guidance and Assistance">
+                <div class="photo-text">
+                    <h4>🤝 Student Guidance & Support</h4>
+                    <p>We provide one-on-one assistance, enrollment help, and counseling services to ensure every student feels supported and heard.</p>
+                </div>
+            </div>
+
+            <!-- Photo 2: Hands-On Hardware Training -->
+            <div class="photo-card">
+                <img src="css-hardware.jpg" alt="Students Assembling Computer">
+                <div class="photo-text">
+                    <h4>🔧 Technical & Hands-On Learning</h4>
+                    <p>Students gain practical skills in computer assembly, maintenance, and repair — building confidence and technical expertise.</p>
+                </div>
+            </div>
+
+            <!-- Photo 3: Computer Maintenance -->
+            <div class="photo-card">
+                <img src="css-inside.jpg" alt="Computer Hardware Components">
+                <div class="photo-text">
+                    <h4>💻 Computer Maintenance & Skills</h4>
+                    <p>Learning the inner workings of technology — from identifying parts to proper assembly and troubleshooting.</p>
+                </div>
+            </div>
+
+            <!-- Photo 4: Instruction & Training -->
+            <div class="photo-card">
+                <img src="css-teaching.jpg" alt="Teacher Conducting Seminar">
+                <div class="photo-text">
+                    <h4>📚 Seminars & Capacity Building</h4>
+                    <p>Regular training sessions, workshops, and information drives to keep students and staff informed and empowered.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCHOOL HISTORY -->
+    <div class="card section-block" style="margin-top: 2.5rem;">
+        <h3 style="color: var(--navy); margin-bottom: 1rem;">🏫 About Manicahan National High School</h3>
+        <div class="history">
+            <p><strong>Established:</strong> 1964 as Manicahan Extension High School — one of the pioneer extension high schools in Zamboanga City.</p>
+            <p style="margin: 0.8rem 0;">In 1972, it became the <strong>pilot barangay high school</strong> in Zamboanga City through the vision of Dr. Pedro Oreta.</p>
+            <p style="margin: 0.8rem 0;">Formally nationalized and renamed <strong>Manicahan National High School</strong> in <strong>1999</strong> under the Department of Education.</p>
+            <p style="margin-top: 0.8rem;"><strong>Location:</strong> 23 kilometers East of Zamboanga City — serving the Manicahan community and neighboring areas.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="faculty.html" class="btn">Meet Our Faculty & Staff →</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Manicahan National High School — CSS Department</p>
+    <p style="margin-top: 0.5rem; opacity: 0.75;">Manicahan, Zamboanga City • DepEd Zamboanga City</p>
+</footer>
+
+</body>
+</html>

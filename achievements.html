@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements — CSS Department</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .achievement-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .achievement-item {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--gold);
+        }
+        .year-tag {
+            display: inline-block;
+            background: var(--navy);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        /* Resized images — same as About CSS page */
+        .feature-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            margin: 1rem auto 1.5rem;
+            display: block;
+        }
+        .photo-block {
+            background: white;
+            padding: 2rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        .photo-block h3 { 
+            color: var(--navy); 
+            margin-bottom: 0.5rem; 
+            text-align: left;
+        }
+        .photo-block p, .photo-block ul {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="School Logo" class="logo">
+    <div class="brand">
+        <h1>Manicahan National High School</h1>
+        <p>Computer Systems Servicing — CSS Department</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About CSS</a></li>
+    <li><a href="modules.html">Modules</a></li>   <!-- ✅ ADD THIS LINE -->
+    <li><a href="faculty.html">Faculty & Staff</a></li>
+    <li><a href="programs.html" class="active">Programs</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    	</ul>
+</nav>
+
+<div class="container">
+    <h2 class="page-title">Achievements & Milestones</h2>
+
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.05rem;">
+        Celebrating the success of our students and the department's contributions through the years.
+    </p>
+
+    <!-- 📜 CERTIFICATES & RECOGNITION -->
+    <div class="photo-block">
+        <h3>🏆 Student Recognition & Certificates</h3>
+        <img src="css-certificates.jpg" alt="KATIBAYAN Certificates and Recognition" class="feature-img">
+        <p>Our students receive official recognition and certificates, including the <strong>KATIBAYAN</strong> — honoring excellence in the <strong>Information and Communications Technology (ICT)</strong> and <strong>Computer Systems Servicing (CSS)</strong> strand. These documents represent the hard work, skills, and achievements of our learners as they progress toward graduation and career readiness.</p>
+    </div>
+
+    <!-- 🖥️ COMPUTER SYSTEMS SERVICING PROGRAM -->
+    <div class="photo-block">
+        <h3>🖥️ Computer Systems Servicing (NC II) Program</h3>
+        <img src="css-css-poster.jpg" alt="Computer Systems Servicing NC II Curriculum" class="feature-img">
+        <p>Our <strong>Computer Systems Servicing NC II</strong> program equips students with industry-standard skills recognized by TESDA. The curriculum covers four core competencies:</p>
+        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+            <li style="padding: 0.5rem 0;"><strong>COC 1 — Install and Configure Computer Systems</strong>: Assembly, OS installation, and system setup</li>
+            <li style="padding: 0.5rem 0;"><strong>COC 2 — Set-up Computer Networks</strong>: Cabling, configuration, and connectivity</li>
+            <li style="padding: 0.5rem 0;"><strong>COC 3 — Set-up Computer Servers</strong>: Server management, IP addressing, and network services</li>
+            <li style="padding: 0.5rem 0;"><strong>COC 4 — Maintain and Repair Systems & Networks</strong>: Troubleshooting, backup, and maintenance</li>
+        </ul>
+        <p>Students gain hands-on experience preparing them for national certification and employment in the IT industry.</p>
+    </div>
+
+    <!-- TIMELINE / MILESTONES -->
+    <h3 style="color: var(--navy); margin-bottom: 1.5rem;">📅 School Milestones</h3>
+    <div class="achievement-list">
+        <div class="achievement-item">
+            <span class="year-tag">2025</span>
+            <h3 style="color: var(--navy);">Excellence in Student Services Award</h3>
+            <p>Recognized by the Division of Zamboanga City for outstanding guidance and counseling practices.</p>
+        </div>
+
+        <div class="achievement-item">
+            <span class="year-tag">2024</span>
+            <h3 style="color: var(--navy);">100% Senior High School Enrollment Rate</h3>
+            <p>All graduating students successfully transitioned to Senior High School with proper track guidance.</p>
+        </div>
+
+        <div class="achievement-item">
+            <span class="year-tag">2023</span>
+            <h3 style="color: var(--navy);">Best Student Support Program</h3>
+            <p>Leadership and Values Formation Program cited as a model initiative in the district.</p>
+        </div>
+
+        <div class="achievement-item">
+            <span class="year-tag">2022</span>
+            <h3 style="color: var(--navy);">Pilot Guidance Center</h3>
+            <p>Selected as one of the model guidance centers in the Division of Zamboanga City.</p>
+        </div>
+
+        <div class="achievement-item">
+            <span class="year-tag">1999</span>
+            <h3 style="color: var(--navy);">Official Nationalization</h3>
+            <p>Manicahan National High School formally recognized as a national institution under DepEd.</p>
+        </div>
+
+        <div class="achievement-item">
+            <span class="year-tag">1972</span>
+            <h3 style="color: var(--navy);">Pilot Barangay High School</h3>
+            <p>Became the first barangay high school in Zamboanga City — a historic milestone.</p>
+        </div>
+
+        <div class="achievement-item">
+            <span class="year-tag">1964</span>
+            <h3 style="color: var(--navy);">School Founded</h3>
+            <p>Established as Manicahan Extension High School — serving the community for over 60 years.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Manicahan National High School — CSS Department</p>
+    <p style="margin-top: 0.5rem; opacity: 0.75;">Manicahan, Zamboanga City • DepEd Zamboanga City</p>
+</footer>
+
+</body>
+</html>

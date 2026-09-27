@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manicahan National High School | CSS Department</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Matches your Home page blue header */
+        .top-header {
+            background: #0f52ba;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .top-header .logo {
+            height: 70px;
+            width: auto;
+        }
+        .top-header .school-name h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .top-header .school-name p {
+            margin: 5px 0 0;
+            opacity: 0.9;
+        }
+        .page-title {
+            text-align: center;
+            margin: 40px 0 30px;
+        }
+        .page-title h2 {
+            font-size: 28px;
+            color: #2d3748;
+            display: inline-block;
+            border-bottom: 3px solid #ecc94b;
+            padding-bottom: 10px;
+        }
+        .module-item {
+            max-width: 900px;
+            margin: 0 auto 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .module-header {
+            padding: 18px 25px;
+            background: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #6b46c1;
+            border-left: 3px solid #6b46c1;
+        }
+        .module-header:hover {
+            background: #f7fafc;
+        }
+        .module-content {
+            padding: 0 25px 20px;
+            display: none;
+            border-top: 1px solid #eee;
+            background: #fafafa;
+        }
+        .module-content.show {
+            display: block;
+        }
+        .pdf-link {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 20px;
+            background: #0f52ba;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pdf-link:hover {
+            background: #0d45a8;
+        }
+        nav {
+            background: #fff;
+            border-bottom: 2px solid #e2e8f0;
+            padding: 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            padding: 0;
+        }
+        nav ul li a {
+            display: block;
+            padding: 18px 25px;
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            border-bottom: 3px solid #ecc94b;
+            color: #0f52ba;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ✅ BLUE HEADER — SAME AS HOME PAGE -->
+<div class="top-header">
+    <img src="logo.jpg" alt="School Logo" class="logo">
+    <div class="school-name">
+        <h1>Manicahan National High School</h1>
+        <p>Computer Systems Servicing — CSS Department</p>
+    </div>
+</div>
+
+<!-- ✅ NAVIGATION — SAME AS HOME PAGE -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About CSS</a></li>
+        <li><a href="modules.html" class="active">Modules</a></li>
+        <li><a href="faculty.html">Faculty & Staff</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ✅ PAGE CONTENT -->
+<div class="container">
+    <div class="page-title">
+        <h2>📚 Curriculum Modules</h2>
+    </div>
+
+    <!-- MODULE 1 -->
+    <div class="module-item">
+        <div class="module-header" onclick="toggleModule(1)">
+            Module 1: Introduction to CSS
+            <span id="icon1">+</span>
+        </div>
+        <div class="module-content" id="content1">
+            <p><strong>Overview:</strong> Introduction to Computer Systems Servicing, career paths, TESDA NC II certification, and workplace safety practices.</p>
+            <a href="module-1.pdf" class="pdf-link" target="_blank">📄 View Full Module (PDF)</a>
+        </div>
+    </div>
+
+    <!-- MODULE 2 -->
+    <div class="module-item">
+        <div class="module-header" onclick="toggleModule(2)">
+            Module 2: Tools & Equipment
+            <span id="icon2">+</span>
+        </div>
+        <div class="module-content" id="content2">
+            <p><strong>Overview:</strong> Identification, proper use, care, and maintenance of hand tools, cleaning tools, and diagnostic equipment.</p>
+            <a href="module-2.pdf" class="pdf-link" target="_blank">📄 View Full Module (PDF)</a>
+        </div>
+    </div>
+
+    <!-- MODULE 3 -->
+    <div class="module-item">
+        <div class="module-header" onclick="toggleModule(3)">
+            Module 3: Computer Assembly
+            <span id="icon3">+</span>
+        </div>
+        <div class="module-content" id="content3">
+            <p><strong>Overview:</strong> Disassembly and assembly procedures, component identification, and BIOS/UEFI configuration.</p>
+            <a href="module-3.pdf" class="pdf-link" target="_blank">📄 View Full Module (PDF)</a>
+        </div>
+    </div>
+
+    <!-- MODULE 4 -->
+    <div class="module-item">
+        <div class="module-header" onclick="toggleModule(4)">
+            Module 4: OS Installation
+            <span id="icon4">+</span>
+        </div>
+        <div class="module-content" id="content4">
+            <p><strong>Overview:</strong> Operating system installation, device drivers setup, software management, and system updates.</p>
+            <a href="module-4.pdf" class="pdf-link" target="_blank">📄 View Full Module (PDF)</a>
+        </div>
+    </div>
+
+    <!-- MODULE 5 -->
+    <div class="module-item">
+        <div class="module-header" onclick="toggleModule(5)">
+            Module 5: Networking & Maintenance
+            <span id="icon5">+</span>
+        </div>
+        <div class="module-content" id="content5">
+            <p><strong>Overview:</strong> Network cabling, IP address configuration, connectivity testing, and preventive system maintenance.</p>
+            <a href="module-5.pdf" class="pdf-link" target="_blank">📄 View Full Module (PDF)</a>
+        </div>
+    </div>
+
+</div>
+
+<footer style="text-align:center; padding:25px; background:#f7fafc; margin-top:50px; color:#718096;">
+    <p>Manicahan National High School — CSS Department © 2026</p>
+</footer>
+
+<script>
+function toggleModule(num) {
+    const content = document.getElementById('content' + num);
+    const icon = document.getElementById('icon' + num);
+    content.classList.toggle('show');
+    icon.textContent = content.classList.contains('show') ? '−' : '+';
+}
+</script>
+
+</body>
+</html>
